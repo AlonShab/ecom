@@ -1,5 +1,5 @@
 import react from 'react';
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 import {NetworkService} from './services/network';
 
 const App = () => {
@@ -13,7 +13,6 @@ const App = () => {
             } catch (e) {
                 console.error(e);
             }
-
         }
 
         getTitle();
@@ -24,4 +23,7 @@ const App = () => {
     </h1>);
 }
 
-ReactDOM.render(<App/>, document.getElementById("root"));
+const domNode = document.getElementById("root")
+const root = createRoot(domNode as HTMLDivElement);
+
+root.render(<App/>);
