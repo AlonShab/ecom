@@ -1,0 +1,6 @@
+{
+  "watch": ["src"],
+  "ext": "ts,json",
+  "ignore": ["node_modules", "dist"],
+  "exec": "node --inspect-brk=0 -r ts-node/register ./src/index.ts"
+}
