@@ -10,10 +10,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// connectDb();
+connectDb();
 
 const router = express.Router();
-// router.get("title", router);
 
 router.get("/api/title", (req, res) => {
     res.status(200).json({ title: 'server says hello'});
